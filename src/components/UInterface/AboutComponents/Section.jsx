@@ -8,6 +8,7 @@ export default function SectionPrimary({ title, children, classes, namount }) {
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: true, amount: namount }}
       className={classes}
+      translate="no"
     >
       <h2 className="text-4xl font-bold mb-6 text-primary tracking-wide drop-shadow-lg">
         {title}

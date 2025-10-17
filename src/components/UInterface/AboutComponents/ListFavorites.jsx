@@ -20,7 +20,7 @@ export default function ListFavorites() {
   // console.log(session);
 
   return (
-    <>
+    <div translate="no">
       <details className="">
         <summary>
           I giochi preferiti di {session?.user.user_metadata.userName}
@@ -46,6 +46,6 @@ export default function ListFavorites() {
             ))}
         </ul>
       </details>
-    </>
+    </div>
   );
 }

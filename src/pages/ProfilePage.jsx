@@ -106,7 +106,7 @@ export default function AccountPage() {
   };
 
   return (
-    <div className="min-h-screen bg-primary text-primary p-6 md:p-12 flex flex-col items-center my-15">
+    <div className="min-h-screen bg-primary text-primary p-6 md:p-12 flex flex-col items-center my-15" translate="no">
       <h1 className="text-3xl font-bold mb-6">Profile Settings</h1>
 
       <form 

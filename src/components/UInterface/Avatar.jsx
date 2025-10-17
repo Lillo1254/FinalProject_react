@@ -86,7 +86,7 @@ export default function Avatar({ url, size, onUpload }) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center relative">
+    <div className="flex flex-col items-center justify-center relative" translate="no">
       {avatarUrl ? (
         <img
           className="avatar image"

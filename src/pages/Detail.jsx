@@ -29,7 +29,7 @@ export default function Detail() {
 
 
   return (
-    <>
+    <div translate="no">
       <div className="flex justify-center mt-25">
 
       <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 
@@ -79,6 +79,6 @@ export default function Detail() {
           </Link>
         </div>
       )}
-    </>
+    </div>
   );
 }

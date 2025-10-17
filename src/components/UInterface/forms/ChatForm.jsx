@@ -44,7 +44,7 @@ if (error) {
 
 
     return (
-        <>
+        <div translate="no">
             
       <form onSubmit={handleMessageSubmit} className="">
         <fieldset role="group" className="flex gap-2 justify-between">
@@ -52,6 +52,6 @@ if (error) {
           <button type="submit" className="btn btn-primary" >Invia</button>
         </fieldset>
       </form>
-        </>
+        </div>
     );
 }

@@ -25,6 +25,7 @@ export default function SearchPage() {
       initial={{ opacity: 0, y: -40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
+      translate="no"
     >
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 border-b border-primary pb-4">
         <h1 className="text-3xl font-extrabold flex items-center gap-3">

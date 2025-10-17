@@ -51,7 +51,7 @@ export default function Home() {
 
 
   return (
-    <>
+    <div translate="no">
       <Main>
 
       
@@ -98,6 +98,6 @@ export default function Home() {
           </motion.div>
  </Main>
       
-    </>
+    </div>
   );
 }

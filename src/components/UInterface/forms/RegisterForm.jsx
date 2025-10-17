@@ -69,7 +69,7 @@ export default function RegisterForm() {
   };
 
   return (
-    <form onSubmit={onSubmit} noValidate className="flex justify-center items-center  bg-primary text-primary">
+    <form onSubmit={onSubmit} noValidate className="flex justify-center items-center  bg-primary text-primary" translate="no">
       <div className="card-surface shadow-form max-w-md w-full p-8">
         <h1 className="text-3xl font-bold text-center mb-6 text-accent">Registrati</h1>
 

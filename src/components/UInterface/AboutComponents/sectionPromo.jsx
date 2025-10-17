@@ -3,7 +3,7 @@ import { ShoppingCart, Gamepad2 } from "lucide-react";
 
 export default function SectionPromo() {
   return (
-    <section className="relative w-full py-20 px-6 text-white overflow-hidden rounded-lg ">
+    <section className="relative w-full py-20 px-6 text-white overflow-hidden rounded-lg " translate="no">
 
 
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15)_0%,transparent_70%)] animate-pulse"></div>

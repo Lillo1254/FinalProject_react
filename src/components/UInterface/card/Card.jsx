@@ -27,7 +27,7 @@ export default function Card({
   const platforms_slug = parent_platforms?.map((platform) => platform.platform.slug);
 
   return (
-    <>
+    <div translate="no">
       <div
         className={`card-surface p-4 rounded-2xl transition-transform duration-300 h-full flex flex-col justify-between items-center ${
           isDetailPage ? "shadow-detail" : "shadow-neon"
@@ -89,6 +89,6 @@ export default function Card({
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }

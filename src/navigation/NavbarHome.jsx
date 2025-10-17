@@ -32,7 +32,7 @@ const publicAvatarUrl = avatarUrl || defaultImg;
   const navItems = ["Home", "Market", "About Us", "Contact"];
 
   return (
-    <div className="fixed top-0 left-0 w-full flex justify-center z-50 lg:mt-3">
+    <div className="fixed top-0 left-0 w-full flex justify-center z-50 lg:mt-3" translate="no">
       <nav className="navbar w-full lg:w-[85%] bg-pink-400/20 backdrop-blur-xl border border-pink-300/30 shadow-lg rounded-b-3xl lg:rounded-full px-4 lg:px-6 py-2 transition-all duration-500">
 
         <div className="navbar-start flex items-center gap-2">

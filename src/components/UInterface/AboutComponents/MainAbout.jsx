@@ -7,7 +7,7 @@ export default function Main({children}) {
   return (
 
 
-    <main className="relative flex flex-col items-center text-center min-h-screen]">
+    <main className="relative flex flex-col items-center text-center min-h-screen]" translate="no">
       <div className="absolute inset-0 bg-black opacity-0 md:opacity-70 z-[-1]">
 
       <video

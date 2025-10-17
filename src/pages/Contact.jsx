@@ -44,7 +44,7 @@ export default function Contact() {
 
 
   return (
-<>
+<div translate="no">
     <section className="bg-primary text-primary min-h-screen flex flex-col items-center justify-center px-6 py-25">
       <div className="max-w-2xl w-full text-center card-surface shadow-form p-10 rounded-2xl">
         <h1 className="text-4xl font-bold mb-4 text-accent">Contattami</h1>
@@ -73,6 +73,6 @@ export default function Contact() {
         <small className="text-xs text-gray-400 ">Il form è funzionante con l'utilizzo di EmailJs per l'invio di messaggi</small>
     </article>
     </section>
-    </>
+    </div>
   );
 }

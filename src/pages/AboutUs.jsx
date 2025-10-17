@@ -7,7 +7,7 @@ export default function AboutUs() {
   }, []);
 
   return (
-    <>
+    <div translate="no">
       <section className="bg-primary text-primary min-h-screen flex flex-col items-center justify-center px-6 py-30">
         <div className="max-w-3xl text-center card-surface shadow-form p-10 rounded-2xl">
           <h1 className="text-4xl font-bold mb-4 text-accent">
@@ -61,6 +61,6 @@ export default function AboutUs() {
       </section>
 
       
-    </>
+    </div>
   );
 }

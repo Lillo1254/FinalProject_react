@@ -20,7 +20,7 @@ export default function AuthenticationPage() {
   };
 
   return (
-    <div className="bg-primary min-h-screen flex flex-col items-center justify-start py-30">
+    <div className="bg-primary min-h-screen flex flex-col items-center justify-start py-30" translate="no">
       <button
         onClick={handleClick}
         className="btn-primary mb-8 rounded-md py-2 px-6 shadow-form hover:shadow-detail transition-all duration-300"

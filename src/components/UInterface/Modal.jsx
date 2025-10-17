@@ -3,7 +3,7 @@ import ChatForm from "./forms/ChatForm";
 
 export default function Modal({ data }) {
   return (
-    <>
+    <div translate="no">
       <button
         className="btn w-20 bg-accent text-primary hover:bg-support transition-all duration-300"
         onClick={() => document.getElementById("my_modal_3").showModal()}
@@ -53,6 +53,6 @@ export default function Modal({ data }) {
           </div>
         </div>
       </dialog>
-    </>
+    </div>
   );
 }
