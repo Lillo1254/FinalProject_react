@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+html {
+  overflow-y: scroll;
+}
+
+/*  PALETTE BASE */
+:root {
+  --color-primary: #1E1E2F;
+  --color-secondary: #2C2C40;
+  --color-tertiary: #F5F5F5;
+  --color-accent: #9B5DE5;
+  --color-support: #F15BB5;
+  --gradient-accent: linear-gradient(90deg, #9B5DE5, #F15BB5);
+}
+
+/*  LIGHT MODE */
+[data-theme="light"] {
+  --color-primary: #F5F5F5;
+  --color-secondary: #E4E4E7;
+  --color-tertiary: #1E1E2F;
+  --color-accent: #9B5DE5;
+  --color-support: #F15BB5;
+  --gradient-accent: linear-gradient(90deg, #F15BB5, #9B5DE5);
+}
+
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+[data-theme="light"] .bg-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+}
+
+.text-primary {
+  color: var(--color-tertiary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-support {
+  color: var(--color-support) !important;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-tertiary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-support);
+}
+
+.btn-secondary {
+  background-color: var(--color-support);
+  color: var(--color-tertiary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent);
+}
+
+.border-primary {
+  border-color: var(--color-secondary);
+}
+
+.bg-gradient-accent {
+  background: var(--gradient-accent);
+}
+
+/* card custom */
+.card-surface {
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+
+
+/* SHADOW*/
+.shadow-neon {
+  box-shadow:
+    0 0 10px var(--color-accent),
+    0 0 20px var(--color-support);
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.shadow-form{
+    box-shadow:
+    0 0 10px var(--color-accent),
+    0 0 20px var(--color-support);
+}
+
+.shadow-lazy{
+    box-shadow:
+    0 0 10px var(--color-accent),
+    0 0 20px var(--color-support);
+}
+
+.shadow-detail {
+  box-shadow: 0 0 10px var(--color-accent),
+    0 0 20px var(--color-support);
+  transition: all 0.3s ease-in-out;
+}
+
+.shadow-neon:hover {
+  transform: translateY(-1rem);
+  box-shadow:
+    0 0 15px var(--color-support),
+    0 0 30px var(--color-accent),
+    0 0 45px rgba(0, 0, 0, 0.3);
+}
+
+/* Light mode shadow */
+[data-theme="light"] .shadow-neon {
+  box-shadow:
+    0 0 8px var(--color-accent),
+    0 0 16px var(--color-support);
+}
+
+[data-theme="light"] .shadow-neon:hover {
+  box-shadow:
+    0 0 12px var(--color-support),
+    0 0 24px var(--color-accent);
+}
+
+@keyframes neon-pulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 0 10px var(--color-accent),
+      0 0 20px var(--color-support);
+  }
+
+  50% {
+    box-shadow:
+      0 0 15px var(--color-support),
+      0 0 30px var(--color-accent);
+  }
+}
+/* follow */
+.trail {
+  position: fixed;
+  pointer-events: none;
+  width: 1rem;
+  height: 0.6rem;
+  border-radius: 100%;
+  background: radial-gradient(circle, #F15BB5 0%, #F15BB5 100%);
+  box-shadow: 
+    0 0 10px #9B5DE5, 
+    0 0 20px #F15BB5, 
+    0 0 30px #F15BB5, 
+    0 0 40px #F15BB5;
+  transform: translate(-50%, -50%),   ;
+  opacity: 1;
+  transition: opacity 0.3s ease-out, transform 0.8s ease-out;
+}
