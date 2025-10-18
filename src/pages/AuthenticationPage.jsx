@@ -1,6 +1,6 @@
 // Percorso: src/pages/AuthenticationPage.jsx
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import RegisterForm from "../components/UInterface/forms/RegisterForm";
 import LoginForm from "../components/UInterface/forms/LoginForm";
@@ -18,6 +18,10 @@ export default function AuthenticationPage() {
     visible: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: 20 },
   };
+
+      useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
 
   return (
     <div className="bg-primary min-h-screen flex flex-col items-center justify-start py-30" translate="no">
