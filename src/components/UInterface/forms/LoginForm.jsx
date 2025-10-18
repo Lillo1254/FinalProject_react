@@ -29,7 +29,7 @@ export default function LoginForm() {
       setFormErrors(error);
       console.log(errors);
     } else {
-      console.log(data);
+      // console.log(data);
       let { error } = await supabaseClient.auth.signInWithPassword({
         email: data.email,
         password: data.password,

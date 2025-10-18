@@ -36,7 +36,7 @@ export default function AboutUs() {
             ].map((skill) => (
               <li
                 key={skill}
-                className="bg-secondary py-2 px-4 rounded-md shadow-detail hover:shadow-form hover:scale-105 transition-all duration-300"
+                className="bg-secondary  py-2 px-4 rounded-md shadow-detail hover:shadow-form hover:scale-105 transition-all duration-300 flex justify-center items-center font-semibold"
               >
                 {skill}
               </li>
