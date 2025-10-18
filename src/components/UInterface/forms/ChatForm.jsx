@@ -8,7 +8,7 @@ export default function ChatForm({ data }) {
     if (!data?.id) {
     return <p>Chat non disponibile (manca il gioco).</p>;
   }
-  console.log(session)
+  // console.log(session)
 
 
  const handleMessageSubmit = async (event) => {

@@ -1,5 +1,8 @@
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+
 import { useCallback, useEffect, useRef, useState } from "react";
 import supabaseClient from "../../../QueryDb/queryDB";
 import { useAuth } from "../../contexts/AuthContext";
@@ -20,6 +23,9 @@ const chatContainer = {
 }
 
 dayjs.extend(relativeTime);
+dayjs.extend(utc);
+dayjs.extend(timezone);
+const now = dayjs().tz("Europe/Rome"); 
 
 
 
@@ -29,15 +35,17 @@ export default function RealtimeChat({ data }) {
     const [loadingInitial, setLoadingInitial] = useState(false);
     const [error, setError] = useState("");
   const messageRef = useRef(null);
-  const { avatarUrl } = useAuth();
-
-
+  const { avatarUrl, isAdmin  } = useAuth();
+  
   //  const publicAvatarUrl = avatarUrl
   //     ? `https://oogpgotiwrgtkrkocooi.supabase.co/storage/v1/object/public/avatars/${avatarUrl}`
   //   : defaultImg;
+  console.log(isAdmin);
   
   const session = useAuth();
-  // console.log(session);
+  console.log(session);
+
+  // const admin = session?.user?.user_metadata?.isAdmin; 
 
     const scrollSmoothBottom = () => {
     if (messageRef.current) {
@@ -109,6 +117,19 @@ export default function RealtimeChat({ data }) {
            {messages.map((message) => {
              const isMyMessage = message.profile_id === myUserId;
 
+              const deleteMessage = async (messageId) => {
+    const { error } = await supabaseClient
+      .from("messages")
+      .delete()
+      .eq("id", messageId);
+
+    if (error) {
+      console.error("Errore cancellando il messaggio:", error.message);
+    } else {
+      setMessages((prev) => prev.filter(msg => msg.id !== messageId));
+    }
+  };
+
       return (
         <article
           key={message.id}
@@ -121,10 +142,20 @@ export default function RealtimeChat({ data }) {
           <div className="flex gap-2 items-center">
             <small>Inviato da:</small>
             <span className="font-bold">{message.profile_username}</span>
+
+            {isAdmin && (
+                <button
+                  onClick={() => deleteMessage(message.id)}
+                  className="btn bg-purple-400 ml-auto hover:underline"
+                >
+                  Elimina
+                </button>
+              )}
+
           </div>
           <p>{message.content}</p>
           <small>
-            {dayjs(message.updated_at ?? message.created_at).fromNow()}
+          {dayjs.utc(message.updated_at ?? message.created_at).tz("Europe/Rome").fromNow()}
           </small>
         </article>
       );

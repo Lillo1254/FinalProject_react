@@ -11,7 +11,7 @@ import defaultImg from "../assets/reactdefault.jpg";
 export default function NavbarHome({ generi }) {
   const listGen = [...new Set(generi)];
   const { session, userName, signOut, avatarUrl } = useAuth();
-  console.log(session);
+  // console.log(session);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
 const publicAvatarUrl = avatarUrl || defaultImg;
